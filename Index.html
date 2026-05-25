@@ -1,0 +1,544 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Металлические двери, ворота, мангалы на заказ | Собственное производство</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        html {
+            scroll-behavior: smooth;
+        }
+        
+        body {
+            font-family: 'Arial', sans-serif;
+            background: #0f0f0f;
+            color: #e0e0e0;
+            line-height: 1.6;
+        }
+        
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+        
+        /* Header */
+        header {
+            background: #1a1a1a;
+            padding: 20px 0;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            border-bottom: 2px solid #ff5500;
+        }
+        
+        .header-content {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+        }
+        
+        .logo {
+            font-size: 24px;
+            font-weight: 900;
+            color: #fff;
+        }
+        
+        .logo span {
+            color: #ff5500;
+        }
+        
+        .phone {
+            font-size: 20px;
+            font-weight: 700;
+            color: #ff5500;
+            text-decoration: none;
+        }
+        
+        /* Hero */
+        .hero {
+            background: linear-gradient(rgba(15,15,15,0.8), rgba(15,15,15,0.9)), 
+                        url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 600"><rect fill="%23222" width="1200" height="600"/><path fill="%23333" d="M0 300L50 280L100 320L150 290L200 310L250 270L300 300L350 280L400 320L450 290L500 310L550 270L600 300L650 280L700 320L750 290L800 310L850 270L900 300L950 280L1000 320L1050 290L1100 310L1150 270L1200 300V600H0V300Z"/></svg>');
+            background-size: cover;
+            padding: 100px 0;
+            text-align: center;
+        }
+        
+        .hero h1 {
+            font-size: 48px;
+            font-weight: 900;
+            margin-bottom: 20px;
+            text-transform: uppercase;
+            color: #fff;
+        }
+        
+        .hero h1 span {
+            color: #ff5500;
+        }
+        
+        .hero p {
+            font-size: 20px;
+            margin-bottom: 40px;
+            color: #b0b0b0;
+        }
+        
+        .btn {
+            display: inline-block;
+            padding: 16px 40px;
+            background: #ff5500;
+            color: #fff;
+            text-decoration: none;
+            font-weight: 700;
+            text-transform: uppercase;
+            border-radius: 4px;
+            transition: 0.3s;
+            border: none;
+            cursor: pointer;
+            font-size: 16px;
+        }
+        
+        .btn:hover {
+            background: #ff7733;
+            transform: translateY(-2px);
+            box-shadow: 0 10px 20px rgba(255,85,0,0.3);
+        }
+        
+        .btn-outline {
+            background: transparent;
+            border: 2px solid #ff5500;
+            margin-left: 15px;
+        }
+        
+        /* Section */
+        section {
+            padding: 80px 0;
+        }
+        
+        .section-title {
+            font-size: 36px;
+            font-weight: 900;
+            text-align: center;
+            margin-bottom: 60px;
+            text-transform: uppercase;
+            color: #fff;
+        }
+        
+        .section-title span {
+            color: #ff5500;
+        }
+        
+        /* Advantages */
+        .advantages {
+            background: #1a1a1a;
+        }
+        
+        .adv-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 30px;
+        }
+        
+        .adv-card {
+            text-align: center;
+            padding: 30px 20px;
+            background: #0f0f0f;
+            border: 1px solid #2a2a2a;
+            border-radius: 8px;
+            transition: 0.3s;
+        }
+        
+        .adv-card:hover {
+            border-color: #ff5500;
+            transform: translateY(-5px);
+        }
+        
+        .adv-icon {
+            font-size: 48px;
+            margin-bottom: 15px;
+        }
+        
+        .adv-card h3 {
+            font-size: 18px;
+            margin-bottom: 10px;
+            color: #ff5500;
+        }
+        
+        /* Products */
+        .products-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+        }
+        
+        .product-card {
+            background: #1a1a1a;
+            border-radius: 8px;
+            overflow: hidden;
+            border: 1px solid #2a2a2a;
+            transition: 0.3s;
+        }
+        
+        .product-card:hover {
+            border-color: #ff5500;
+            transform: translateY(-5px);
+        }
+        
+        .product-img {
+            width: 100%;
+            height: 220px;
+            background: linear-gradient(135deg, #2a2a2a 0%, #1a1a1a 100%);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 64px;
+        }
+        
+        .product-content {
+            padding: 25px;
+        }
+        
+        .product-content h3 {
+            font-size: 22px;
+            margin-bottom: 10px;
+            color: #fff;
+        }
+        
+        .product-content p {
+            color: #b0b0b0;
+            margin-bottom: 20px;
+            font-size: 14px;
+        }
+        
+        /* Steps */
+        .steps {
+            background: #1a1a1a;
+        }
+        
+        .steps-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 40px;
+            position: relative;
+        }
+        
+        .step {
+            text-align: center;
+            position: relative;
+        }
+        
+        .step-num {
+            width: 60px;
+            height: 60px;
+            background: #ff5500;
+            color: #fff;
+            font-size: 28px;
+            font-weight: 900;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 50%;
+            margin: 0 auto 20px;
+        }
+        
+        /* Form */
+        .form-section {
+            background: linear-gradient(135deg, #1a1a1a 0%, #0f0f0f 100%);
+        }
+        
+        .form-box {
+            max-width: 600px;
+            margin: 0 auto;
+            background: #0f0f0f;
+            padding: 40px;
+            border-radius: 8px;
+            border: 2px solid #ff5500;
+        }
+        
+        .form-group {
+            margin-bottom: 20px;
+        }
+        
+        .form-group label {
+            display: block;
+            margin-bottom: 8px;
+            color: #b0b0b0;
+            font-weight: 700;
+        }
+        
+        .form-group input,
+        .form-group select,
+        .form-group textarea {
+            width: 100%;
+            padding: 14px;
+            background: #1a1a1a;
+            border: 1px solid #2a2a2a;
+            border-radius: 4px;
+            color: #fff;
+            font-size: 16px;
+        }
+        
+        .form-group input:focus,
+        .form-group select:focus,
+        .form-group textarea:focus {
+            outline: none;
+            border-color: #ff5500;
+        }
+        
+        /* Footer */
+        footer {
+            background: #0a0a0a;
+            padding: 40px 0;
+            text-align: center;
+            border-top: 2px solid #ff5500;
+        }
+        
+        .contacts {
+            margin-bottom: 20px;
+        }
+        
+        .contacts a {
+            color: #ff5500;
+            text-decoration: none;
+            font-size: 20px;
+            font-weight: 700;
+            display: block;
+            margin: 10px 0;
+        }
+        
+        /* Mobile */
+        @media (max-width: 768px) {
+            .hero h1 {
+                font-size: 32px;
+            }
+            .btn {
+                display: block;
+                margin: 10px 0;
+            }
+            .btn-outline {
+                margin-left: 0;
+            }
+            .header-content {
+                justify-content: center;
+                gap: 15px;
+            }
+        }
+        
+        /* Scroll top button */
+        .scroll-top {
+            position: fixed;
+            bottom: 30px;
+            right: 30px;
+            width: 50px;
+            height: 50px;
+            background: #ff5500;
+            color: #fff;
+            border: none;
+            border-radius: 50%;
+            font-size: 24px;
+            cursor: pointer;
+            display: none;
+            z-index: 999;
+        }
+        
+        .scroll-top.show {
+            display: block;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <div class="header-content">
+                <div class="logo">СТАЛЬ<span>ЦЕХ</span></div>
+                <a href="tel:+77000000000" class="phone">+7 700 000 00 00</a>
+            </div>
+        </div>
+    </header>
+
+    <section class="hero">
+        <div class="container">
+            <h1>Металлические <span>двери, ворота и мангалы</span> на заказ</h1>
+            <p>Собственное производство в ангаре. Любые размеры. Гарантия 3 года</p>
+            <a href="#form" class="btn">Рассчитать стоимость</a>
+            <a href="#catalog" class="btn btn-outline">Каталог продукции</a>
+        </div>
+    </section>
+
+    <section class="advantages">
+        <div class="container">
+            <h2 class="section-title">Почему выбирают <span>нас</span></h2>
+            <div class="adv-grid">
+                <div class="adv-card">
+                    <div class="adv-icon">🏭</div>
+                    <h3>Свой ангар</h3>
+                    <p>Производим сами, без посредников и наценок</p>
+                </div>
+                <div class="adv-card">
+                    <div class="adv-icon">📐</div>
+                    <h3>Любые размеры</h3>
+                    <p>Изготовим по вашим чертежам и замерам</p>
+                </div>
+                <div class="adv-card">
+                    <div class="adv-icon">🎨</div>
+                    <h3>Порошковая покраска</h3>
+                    <p>Стойкое покрытие, 200+ цветов RAL</p>
+                </div>
+                <div class="adv-card">
+                    <div class="adv-icon">🛡️</div>
+                    <h3>Гарантия 3 года</h3>
+                    <p>Отвечаем за качество каждой сварки</p>
+                </div>
+                <div class="adv-card">
+                    <div class="adv-icon">🚚</div>
+                    <h3>Доставка и монтаж</h3>
+                    <p>По Алматы и Алматинской области</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="catalog">
+        <div class="container">
+            <h2 class="section-title">Что <span>производим</span></h2>
+            <div class="products-grid">
+                <div class="product-card">
+                    <div class="product-img">🚪</div>
+                    <div class="product-content">
+                        <h3>Входные двери</h3>
+                        <p>Утепленные, с МДФ накладками, коваными элементами. Толщина металла от 2мм. Замки 3-4 класса взломостойкости.</p>
+                        <a href="#form" class="btn">Заказать замер</a>
+                    </div>
+                <div class="product-card">
+                    <div class="product-img">🚧</div>
+                    <div class="product-content">
+                        <h3>Ворота распашные и откатные</h3>
+                        <p>Из профлиста, с ковкой, решетчатые. Автоматика по желанию. Ширина до 6 метров. Каркас из профиля 60х40.</p>
+                        <a href="#form" class="btn">Заказать замер</a>
+                    </div>
+                </div>
+                <div class="product-card">
+                    <div class="product-img">🔥</div>
+                    <div class="product-content">
+                        <h3>Большие мангалы</h3>
+                        <p>Для кафе, баз отдыха и дома. Толщина 3-5мм. С крышей, коптильней, казаном. Размеры до 2.5 метров.</p>
+                        <a href="#form" class="btn">Узнать цену</a>
+                    </div>
+                </div>
+                <div class="product-card">
+                    <div class="product-img">🏠</div>
+                    <div class="product-content">
+                        <h3>Навесы и решетки</h3>
+                        <p>Для авто, террас, окон и балконов. Поликарбонат, профлист. Кованые и сварные решетки любой сложности.</p>
+                        <a href="#form" class="btn">Узнать цену</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="steps">
+        <div class="container">
+            <h2 class="section-title">Как мы <span>работаем</span></h2>
+            <div class="steps-grid">
+                <div class="step">
+                    <div class="step-num">1</div>
+                    <h3>Заявка и замер</h3>
+                    <p>Выезжаем на объект, снимаем размеры</p>
+                </div>
+                <div class="step">
+                    <div class="step-num">2</div>
+                    <h3>Чертеж и расчет</h3>
+                    <p>Готовим проект, согласуем цену</p>
+                </div>
+                <div class="step">
+                    <div class="step-num">3</div>
+                    <h3>Производство</h3>
+                    <p>Варим в своем ангаре 5-14 дней</p>
+                </div>
+                <div class="step">
+                    <div class="step-num">4</div>
+                    <h3>Покраска</h3>
+                    <p>Порошковая покраска в камере</p>
+                </div>
+                <div class="step">
+                    <div class="step-num">5</div>
+                    <h3>Монтаж</h3>
+                    <p>Доставляем и устанавливаем</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="form" class="form-section">
+        <div class="container">
+            <h2 class="section-title">Рассчитать <span>стоимость</span></h2>
+            <div class="form-box">
+                <form onsubmit="alert('Заявка отправлена! Мы перезвоним в течение 15 минут.'); return false;">
+                    <div class="form-group">
+                        <label>Ваше имя</label>
+                        <input type="text" required placeholder="Иван">
+                    </div>
+                    <div class="form-group">
+                        <label>Телефон</label>
+                        <input type="tel" required placeholder="+7 700 000 00 00">
+                    </div>
+                    <div class="form-group">
+                        <label>Что нужно изготовить?</label>
+                        <select required>
+                            <option value="">Выберите изделие</option>
+                            <option>Входная дверь</option>
+                            <option>Ворота распашные</option>
+                            <option>Ворота откатные</option>
+                            <option>Большой мангал</option>
+                            <option>Навес</option>
+                            <option>Решетки на окна</option>
+                            <option>Другое</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label>Примерные размеры / комментарий</label>
+                        <textarea rows="4" placeholder="Ширина 3м, высота 2м. Нужна ковка..."></textarea>
+                    </div>
+                    <button type="submit" class="btn" style="width: 100%;">Отправить заявку</button>
+                    <p style="text-align: center; margin-top: 15px; font-size: 14px; color: #888;">
+                        Нажимая кнопку, вы соглашаетесь на обработку данных
+                    </p>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <div class="contacts">
+                <a href="tel:+77000000000">+7 700 000 00 00</a>
+                <a href="https://wa.me/77000000000">Написать в WhatsApp</a>
+                <p style="margin-top: 20px; color: #888;">г. Алматы, ул. Индустриальная, ангар 15</p>
+                <p style="color: #888;">Работаем: Пн-Сб 9:00 - 19:00</p>
+            </div>
+            <p style="margin-top: 30px; color: #555;">© 2026 СтальЦех. Собственное производство металлоконструкций</p>
+        </div>
+    </footer>
+
+    <button class="scroll-top" onclick="window.scrollTo({top: 0, behavior: 'smooth'})">↑</button>
+
+    <script>
+        // Показываем кнопку "наверх" при скролле
+        window.addEventListener('scroll', function() {
+            const btn = document.querySelector('.scroll-top');
+            if (window.pageYOffset > 300) {
+                btn.classList.add('show');
+            } else {
+                btn.classList.remove('show');
+            }
+        });
+    </script>
+</body>
+</html>

@@ -18,11 +18,7 @@
             --radius: 18px;
         }
         
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
+        * { margin: 0; padding: 0; box-sizing: border-box; }
         
         body {
             font-family: -apple-system, BlinkMacSystemFont, 'Inter', 'SF Pro Display', sans-serif;
@@ -32,17 +28,10 @@
             line-height: 1.5;
         }
         
-        .container {
-            max-width: 980px;
-            margin: 0 auto;
-            padding: 0 22px;
-        }
+        .container { max-width: 980px; margin: 0 auto; padding: 0 22px; }
         
-        /* Nav - как у Apple */
         nav {
-            position: fixed;
-            top: 0;
-            width: 100%;
+            position: fixed; top: 0; width: 100%;
             background: rgba(255, 255, 255, 0.8);
             backdrop-filter: saturate(180%) blur(20px);
             border-bottom: 1px solid rgba(0,0,0,0.08);
@@ -50,396 +39,102 @@
         }
         
         .nav-inner {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            height: 44px;
-            max-width: 980px;
-            margin: 0 auto;
-            padding: 0 22px;
+            display: flex; justify-content: space-between; align-items: center;
+            height: 44px; max-width: 980px; margin: 0 auto; padding: 0 22px;
         }
         
-        .nav-logo {
-            font-size: 21px;
-            font-weight: 600;
-            letter-spacing: -0.3px;
-        }
+        .nav-logo { font-size: 21px; font-weight: 600; letter-spacing: -0.3px; }
+        .nav-links { display: flex; gap: 32px; font-size: 12px; }
+        .nav-links a { color: var(--text); text-decoration: none; opacity: 0.8; transition: opacity 0.2s; }
+        .nav-links a:hover { opacity: 1; }
         
-        .nav-links {
-            display: flex;
-            gap: 32px;
-            font-size: 12px;
-        }
-        
-        .nav-links a {
-            color: var(--text);
-            text-decoration: none;
-            opacity: 0.8;
-            transition: opacity 0.2s;
-        }
-        
-        .nav-links a:hover {
-            opacity: 1;
-        }
-        
-        /* Hero - огромный как iPhone */
-        .hero {
-            padding: 120px 0 80px;
-            text-align: center;
-            background: var(--bg);
-        }
-        
-        .hero-eyebrow {
-            font-size: 21px;
-            font-weight: 600;
-            color: var(--accent);
-            margin-bottom: 8px;
-        }
-        
+        .hero { padding: 100px 0 60px; text-align: center; background: var(--bg); }
+        .hero-eyebrow { font-size: 21px; font-weight: 600; color: var(--accent); margin-bottom: 8px; }
         .hero-title {
-            font-size: 80px;
-            font-weight: 700;
-            letter-spacing: -2.5px;
-            line-height: 1.05;
-            margin-bottom: 16px;
-            max-width: 800px;
-            margin-left: auto;
-            margin-right: auto;
+            font-size: 80px; font-weight: 700; letter-spacing: -2.5px; line-height: 1.05;
+            margin-bottom: 16px; max-width: 800px; margin-left: auto; margin-right: auto;
         }
-        
         .hero-subtitle {
-            font-size: 28px;
-            color: var(--text-secondary);
-            font-weight: 400;
-            letter-spacing: -0.5px;
-            margin-bottom: 40px;
-            max-width: 640px;
-            margin-left: auto;
-            margin-right: auto;
+            font-size: 28px; color: var(--text-secondary); font-weight: 400; letter-spacing: -0.5px;
+            margin-bottom: 40px; max-width: 640px; margin-left: auto; margin-right: auto;
         }
-        
-        .hero-cta {
-            display: flex;
-            justify-content: center;
-            gap: 20px;
-            margin-bottom: 60px;
-        }
+        .hero-cta { display: flex; justify-content: center; gap: 20px; margin-bottom: 50px; }
         
         .btn-primary {
-            background: var(--accent);
-            color: white;
-            padding: 12px 22px;
-            border-radius: 980px;
-            text-decoration: none;
-            font-size: 17px;
-            font-weight: 400;
-            transition: all 0.2s;
+            background: var(--accent); color: white; padding: 12px 22px;
+            border-radius: 980px; text-decoration: none; font-size: 17px;
+            font-weight: 400; transition: all 0.2s; display: inline-block;
         }
+        .btn-primary:hover { background: #0077ED; transform: translateY(-1px); }
         
-        .btn-primary:hover {
-            background: #0077ED;
-        }
+        .hero-image { max-width: 1200px; margin: 0 auto; padding: 0 22px; }
+        .hero-image img { width: 100%; height: 560px; object-fit: cover; border-radius: var(--radius); }
         
-        .btn-secondary {
-            color: var(--accent);
-            padding: 12px 22px;
-            text-decoration: none;
-            font-size: 17px;
-        }
-        
-        .btn-secondary:hover {
-            text-decoration: underline;
-        }
-        
-        .hero-image {
-            max-width: 1200px;
-            margin: 0 auto;
-            padding: 0 22px;
-        }
-        
-        .hero-image img {
-            width: 100%;
-            height: 600px;
-            object-fit: cover;
-            border-radius: var(--radius);
-        }
-        
-        /* Product section - как у Apple */
-        .product-section {
-            padding: 120px 0;
-            text-align: center;
-        }
-        
-        .product-section.alt {
-            background: var(--bg-secondary);
-        }
-        
-        .product-eyebrow {
-            font-size: 17px;
-            font-weight: 600;
-            color: var(--accent);
-            margin-bottom: 8px;
-        }
-        
-        .product-title {
-            font-size: 56px;
-            font-weight: 700;
-            letter-spacing: -1.5px;
-            line-height: 1.1;
-            margin-bottom: 12px;
-        }
-        
+        .product-section { padding: 80px 0; text-align: center; }
+        .product-section.alt { background: var(--bg-secondary); }
+        .product-eyebrow { font-size: 17px; font-weight: 600; color: var(--accent); margin-bottom: 8px; }
+        .product-title { font-size: 56px; font-weight: 700; letter-spacing: -1.5px; line-height: 1.1; margin-bottom: 12px; }
         .product-subtitle {
-            font-size: 28px;
-            color: var(--text-secondary);
-            font-weight: 400;
-            margin-bottom: 24px;
-            max-width: 700px;
-            margin-left: auto;
-            margin-right: auto;
+            font-size: 28px; color: var(--text-secondary); font-weight: 400;
+            margin-bottom: 32px; max-width: 700px; margin-left: auto; margin-right: auto;
         }
+        .product-cta { display: flex; justify-content: center; gap: 16px; margin-bottom: 40px; flex-wrap: wrap; }
+        .product-image-wrap { max-width: 1000px; margin: 0 auto; }
+        .product-image-wrap img { width: 100%; height: 480px; object-fit: cover; border-radius: var(--radius); }
         
-        .product-links {
-            display: flex;
-            justify-content: center;
-            gap: 32px;
-            margin-bottom: 48px;
-            font-size: 21px;
-        }
-        
-        .product-links a {
-            color: var(--accent);
-            text-decoration: none;
-        }
-        
-        .product-links a:hover {
-            text-decoration: underline;
-        }
-        
-        .product-links a::after {
-            content: ' ›';
-        }
-        
-        .product-image-wrap {
-            max-width: 1000px;
-            margin: 0 auto;
-        }
-        
-        .product-image-wrap img {
-            width: 100%;
-            height: 500px;
-            object-fit: cover;
-            border-radius: var(--radius);
-        }
-        
-        /* Features grid - 3 колонки как на apple.com */
-        .features {
-            padding: 100px 0;
-            background: var(--bg-secondary);
-        }
-        
-        .features-grid {
-            display: grid;
-            grid-template-columns: repeat(3, 1fr);
-            gap: 40px;
-            max-width: 980px;
-            margin: 0 auto;
-        }
-        
-        .feature {
-            text-align: center;
-            padding: 40px 20px;
-        }
-        
+        .features { padding: 70px 0; background: var(--bg-secondary); }
+        .features-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 40px; max-width: 980px; margin: 0 auto; }
+        .feature { text-align: center; padding: 30px 20px; }
         .feature-icon {
-            width: 56px;
-            height: 56px;
-            margin: 0 auto 20px;
-            background: white;
-            border-radius: 14px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-size: 28px;
-            box-shadow: 0 4px 16px rgba(0,0,0,0.08);
+            width: 56px; height: 56px; margin: 0 auto 20px; background: white;
+            border-radius: 14px; display: flex; align-items: center; justify-content: center;
+            font-size: 28px; box-shadow: 0 4px 16px rgba(0,0,0,0.08);
         }
+        .feature h3 { font-size: 21px; font-weight: 600; margin-bottom: 8px; }
+        .feature p { font-size: 17px; color: var(--text-secondary); line-height: 1.4; }
         
-        .feature h3 {
-            font-size: 21px;
-            font-weight: 600;
-            margin-bottom: 8px;
-        }
+        .specs { padding: 70px 0; }
+        .specs-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 60px; align-items: center; max-width: 980px; margin: 0 auto; }
+        .specs-text h2 { font-size: 48px; font-weight: 700; letter-spacing: -1px; line-height: 1.1; margin-bottom: 20px; }
+        .specs-text p { font-size: 21px; color: var(--text-secondary); line-height: 1.4; margin-bottom: 24px; }
+        .specs-image img { width: 100%; height: 400px; object-fit: cover; border-radius: var(--radius); }
         
-        .feature p {
-            font-size: 17px;
-            color: var(--text-secondary);
-            line-height: 1.4;
-        }
+        .gallery-section { padding: 60px 0; background: var(--bg-secondary); }
+        .gallery-title { text-align: center; font-size: 40px; font-weight: 700; letter-spacing: -1px; margin-bottom: 50px; }
+        .gallery-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px; max-width: 1200px; margin: 0 auto; padding: 0 22px; }
+        .gallery-item { aspect-ratio: 4/3; border-radius: var(--radius); overflow: hidden; background: white; }
+        .gallery-item img { width: 100%; height: 100%; object-fit: cover; transition: transform 0.6s cubic-bezier(0.2, 0, 0, 1); }
+        .gallery-item:hover img { transform: scale(1.05); }
         
-        /* Specs - как тех характеристики */
-        .specs {
-            padding: 100px 0;
-        }
-        
-        .specs-grid {
-            display: grid;
-            grid-template-columns: repeat(2, 1fr);
-            gap: 80px;
-            align-items: center;
-            max-width: 980px;
-            margin: 0 auto;
-        }
-        
-        .specs-text h2 {
-            font-size: 48px;
-            font-weight: 700;
-            letter-spacing: -1px;
-            line-height: 1.1;
-            margin-bottom: 20px;
-        }
-        
-        .specs-text p {
-            font-size: 21px;
-            color: var(--text-secondary);
-            line-height: 1.4;
-            margin-bottom: 24px;
-        }
-        
-        .specs-image img {
-            width: 100%;
-            height: 400px;
-            object-fit: cover;
-            border-radius: var(--radius);
-        }
-        
-        /* Gallery */
-        .gallery-section {
-            padding: 80px 0;
-            background: var(--bg-secondary);
-        }
-        
-        .gallery-title {
-            text-align: center;
-            font-size: 40px;
-            font-weight: 700;
-            letter-spacing: -1px;
-            margin-bottom: 60px;
-        }
-        
-        .gallery-grid {
-            display: grid;
-            grid-template-columns: repeat(3, 1fr);
-            gap: 20px;
-            max-width: 1200px;
-            margin: 0 auto;
-            padding: 0 22px;
-        }
-        
-        .gallery-item {
-            aspect-ratio: 4/3;
-            border-radius: var(--radius);
-            overflow: hidden;
-            background: white;
-        }
-        
-        .gallery-item img {
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-            transition: transform 0.6s cubic-bezier(0.2, 0, 0, 1);
-        }
-        
-        .gallery-item:hover img {
-            transform: scale(1.05);
-        }
-        
-        /* CTA - финальный блок */
-        .final-cta {
-            padding: 120px 0;
-            text-align: center;
-        }
-        
-        .final-cta h2 {
-            font-size: 56px;
-            font-weight: 700;
-            letter-spacing: -1.5px;
-            margin-bottom: 16px;
-        }
-        
-        .final-cta p {
-            font-size: 21px;
-            color: var(--text-secondary);
-            margin-bottom: 32px;
-        }
-        
-        .form-simple {
-            max-width: 400px;
-            margin: 0 auto;
-        }
-        
+        .final-cta { padding: 80px 0; text-align: center; }
+        .final-cta h2 { font-size: 56px; font-weight: 700; letter-spacing: -1.5px; margin-bottom: 16px; }
+        .final-cta p { font-size: 21px; color: var(--text-secondary); margin-bottom: 32px; }
+        .form-simple { max-width: 400px; margin: 0 auto; }
         .form-simple input {
-            width: 100%;
-            padding: 16px 20px;
-            font-size: 17px;
-            border: 1px solid var(--border);
-            border-radius: 12px;
-            margin-bottom: 12px;
-            font-family: inherit;
+            width: 100%; padding: 16px 20px; font-size: 17px;
+            border: 1px solid var(--border); border-radius: 12px;
+            margin-bottom: 12px; font-family: inherit;
         }
-        
-        .form-simple input:focus {
-            outline: none;
-            border-color: var(--accent);
-            box-shadow: 0 0 0 4px rgba(0, 113, 227, 0.15);
-        }
-        
+        .form-simple input:focus { outline: none; border-color: var(--accent); box-shadow: 0 0 0 4px rgba(0, 113, 227, 0.15); }
         .form-simple button {
-            width: 100%;
-            padding: 16px;
-            background: var(--accent);
-            color: white;
-            border: none;
-            border-radius: 12px;
-            font-size: 17px;
-            font-weight: 500;
-            cursor: pointer;
-            font-family: inherit;
+            width: 100%; padding: 16px; background: var(--accent); color: white;
+            border: none; border-radius: 980px; font-size: 17px; font-weight: 500;
+            cursor: pointer; font-family: inherit; transition: all 0.2s;
         }
+        .form-simple button:hover { background: #0077ED; }
         
-        /* Footer */
-        footer {
-            background: var(--bg-secondary);
-            padding: 40px 0;
-            font-size: 12px;
-            color: var(--text-secondary);
-            text-align: center;
-            border-top: 1px solid var(--border);
-        }
+        footer { background: var(--bg-secondary); padding: 40px 0; font-size: 12px; color: var(--text-secondary); text-align: center; border-top: 1px solid var(--border); }
         
-        /* Mobile */
         @media (max-width: 768px) {
-            .hero-title {
-                font-size: 48px;
-            }
-            .hero-subtitle {
-                font-size: 21px;
-            }
-            .product-title {
-                font-size: 40px;
-            }
-            .product-subtitle {
-                font-size: 21px;
-            }
-            .features-grid, .specs-grid, .gallery-grid {
-                grid-template-columns: 1fr;
-                gap: 40px;
-            }
-            .nav-links {
-                display: none;
-            }
-            .hero-image img, .product-image-wrap img {
-                height: 350px;
-            }
+            .hero-title { font-size: 48px; }
+            .hero-subtitle { font-size: 21px; }
+            .product-title { font-size: 40px; }
+            .product-subtitle { font-size: 21px; }
+            .features-grid, .specs-grid, .gallery-grid { grid-template-columns: 1fr; gap: 30px; }
+            .nav-links { display: none; }
+            .hero-image img, .product-image-wrap img { height: 340px; }
+            .hero { padding: 80px 0 40px; }
+            .product-section, .final-cta { padding: 60px 0; }
         }
     </style>
 </head>
@@ -463,8 +158,7 @@
             <h1 class="hero-title">Двери. Ворота. Мангалы.</h1>
             <p class="hero-subtitle">Изготавливаем в своем ангаре. Без посредников. С гарантией 3 года.</p>
             <div class="hero-cta">
-                <a href="#contact" class="btn-primary">Рассчитать стоимость</a>
-                <a href="#works" class="btn-secondary">Смотреть работы</a>
+                <a href="#works" class="btn-primary">Смотреть работы</a>
             </div>
         </div>
         <div class="hero-image">
@@ -477,9 +171,9 @@
             <div class="product-eyebrow">Новинка</div>
             <h2 class="product-title">Входные двери</h2>
             <p class="product-subtitle">Утепленные 70мм. Металл 2-3мм. Порошковая покраска. От 85 000 ₸</p>
-            <div class="product-links">
-                <a href="#contact">Заказать замер</a>
-                <a href="#contact">Узнать подробнее</a>
+            <div class="product-cta">
+                <a href="#contact" class="btn-primary">Заказать замер</a>
+                <a href="#contact" class="btn-primary">Узнать подробнее</a>
             </div>
         </div>
         <div class="product-image-wrap">
@@ -491,10 +185,11 @@
         <div class="container">
             <h2 class="product-title">Ворота откатные</h2>
             <p class="product-subtitle">Рама 60×40. Автоматика Doorhan. Ширина до 6 метров. От 180 000 ₸</p>
-            <div class="product-links">
-                <a href="#contact">Рассчитать</a>
-                <a href="#contact">Посмотреть варианты</a>
+            <div class="product-cta">
+                <a href="#contact" class="btn-primary">Рассчитать</a>
+                <a href="#contact" class="btn-primary">Посмотреть варианты</a>
             </div>
+        </div>
         <div class="product-image-wrap">
             <img src="https://images.unsplash.com/photo-1560448204-603b3fc33ddc?w=1200&q=80" alt="Ворота">
         </div>
@@ -504,83 +199,8 @@
         <div class="container">
             <h2 class="product-title">Мангалы XXL</h2>
             <p class="product-subtitle">Толщина 4-5мм. С крышей и коптильней. Для дома и бизнеса. От 95 000 ₸</p>
-            <div class="product-links">
-                <a href="#contact">Выбрать размер</a>
-            </div>
-        <div class="product-image-wrap">
-            <img src="https://images.unsplash.com/photo-1555939594-58d7cb561ad1?w=1200&q=80" alt="Мангал">
-        </div>
-    </section>
-
-    <section class="features">
-        <div class="container">
-            <div class="features-grid">
-                <div class="feature">
-                    <div class="feature-icon">🏭</div>
-                    <h3>Свой ангар</h3>
-                    <p>800м² производства. 3 сварочных поста. Своя покрасочная камера.</p>
-                </div>
-                <div class="feature">
-                    <div class="feature-icon">⚡</div>
-                    <h3>От 5 дней</h3>
-                    <p>Не ждете месяц. Изготавливаем быстро, без потери качества.</p>
-                </div>
-                <div class="feature">
-                    <div class="feature-icon">🛡️</div>
-                    <h3>Гарантия 3 года</h3>
-                    <p>Прописываем в договоре. Отвечаем за каждую сварку.</p>
-                </div>
+            <div class="product-cta">
+                <a href="#contact" class="btn-primary">Выбрать размер</a>
             </div>
         </div>
-    </section>
-
-    <section class="specs">
-        <div class="container">
-            <div class="specs-grid">
-                <div class="specs-text">
-                    <h2>Производство полного цикла</h2>
-                    <p>Замеряем. Чертим. Варим. Красим. Монтируем. Все в одном ангаре в Алматы.</p>
-                    <p>Работаем с 2012 года. Более 1200 изделий установлено по городу и области.</p>
-                    <a href="#contact" class="btn-primary">Обсудить проект</a>
-                </div>
-                <div class="specs-image">
-                    <img src="https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?w=800&q=80" alt="Производство">
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <section id="works" class="gallery-section">
-        <h2 class="gallery-title">Наши работы</h2>
-        <div class="gallery-grid">
-            <div class="gallery-item"><img src="https://images.unsplash.com/photo-1600607687920-4e2a09cf159d?w=600&q=80" alt=""></div>
-            <div class="gallery-item"><img src="https://images.unsplash.com/photo-1600566753190-17f0baa2a6c3?w=600&q=80" alt=""></div>
-            <div class="gallery-item"><img src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?w=600&q=80" alt=""></div>
-            <div class="gallery-item"><img src="https://images.unsplash.com/photo-1600607687644-c7171b42498b?w=600&q=80" alt=""></div>
-            <div class="gallery-item"><img src="https://images.unsplash.com/photo-1600566752355-35792bedcfea?w=600&q=80" alt=""></div>
-            <div class="gallery-item"><img src="https://images.unsplash.com/photo-1600607688969-a5bfcd646154?w=600&q=80" alt=""></div>
-        </div>
-    </section>
-
-    <section id="contact" class="final-cta">
-        <div class="container">
-            <h2>Готовы начать?</h2>
-            <p>Оставьте номер — перезвоним в течение 15 минут и рассчитаем стоимость.</p>
-            <form class="form-simple" onsubmit="alert('Спасибо! Перезвоним с 9:00 до 19:00'); return false;">
-                <input type="text" placeholder="Ваше имя" required>
-                <input type="tel" placeholder="+7 700 000 00 00" required>
-                <button type="submit">Получить расчет</button>
-            </form>
-            <p style="margin-top: 24px; font-size: 14px; color: var(--text-secondary);">
-                Или позвоните: <a href="tel:+77000000000" style="color: var(--accent); text-decoration: none;">+7 700 000 00 00</a>
-            </p>
-        </div>
-    </section>
-
-    <footer>
-        <div class="container">
-            <p>© 2026 Ангар. Производство металлоконструкций в Алматы. Индустриальная зона, строение 15. Пн-Сб 9:00–19:00</p>
-        </div>
-    </footer>
-</body>
-</html>
+        <div class
